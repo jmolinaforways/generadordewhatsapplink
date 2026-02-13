@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Links de WhatsApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <div class="glass-card">
+            <header>
+                <div class="icon-wrapper">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h1>WhatsApp Link Generator</h1>
+                <p>Crea enlaces directos para iniciar chats al instante.</p>
+            </header>
+
+            <form id="generator-form">
+                <div class="input-group">
+                    <label for="phone">Número de Teléfono</label>
+                    <div class="phone-input-wrapper">
+                        <input type="tel" id="phone" placeholder="Código País + Número (Ej: 18491234567)"
+                            autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Mensaje (Opcional)</label>
+                    <textarea id="message" rows="3" placeholder="Hola, quisiera más información..."></textarea>
+                </div>
+
+                <!-- Main Action: OpenDirectly -->
+                <button type="submit" id="generate-btn">
+                    <span>Abrir Chat en WhatsApp</span>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+            </form>
+
+            <div id="result-area" class="result-area hidden">
+                <div class="link-display">
+                    <input type="text" id="generated-link" readonly>
+                    <button id="copy-btn" title="Copiar enlace">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
